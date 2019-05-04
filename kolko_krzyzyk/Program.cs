@@ -36,7 +36,7 @@ namespace kolko_krzyzyk
             }
         }
 
-        static rysujPlansze(char[,] plansza)
+        static void rysujPlansze(char[,] plansza)
         {
             int wysokosc = plansza.GetLength(0);
             int szerokosc = plansza.GetLength(1);
@@ -48,6 +48,7 @@ namespace kolko_krzyzyk
                 Console.WriteLine();
             }
 
+            
             
         }
 
