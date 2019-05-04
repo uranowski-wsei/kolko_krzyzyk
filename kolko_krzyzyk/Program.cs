@@ -12,8 +12,8 @@ namespace kolko_krzyzyk
         {
             string imieGraczaA = "";
             string imieGraczaB = "";
-            char znakGraczaA = "x";
-            char znakGraczaB = "o";
+            char znakGraczaA = 'x';
+            char znakGraczaB = 'o';
             char[,] plansza = new char[3, 3]
             {
                 {'1','2','3' },
@@ -25,6 +25,30 @@ namespace kolko_krzyzyk
             imieGraczaA = Console.ReadLine();
             Console.Write("Wpisz imie gracza B: ");
             imieGraczaB = Console.ReadLine();
+
+            bool koniecGry = false;
+            while (!koniecGry)
+            {
+                Console.Clear();
+                rysujPlansze(plansza);
+
+                Console.ReadKey();
+            }
+        }
+
+        static rysujPlansze(char[,] plansza)
+        {
+            int wysokosc = plansza.GetLength(0);
+            int szerokosc = plansza.GetLength(1);
+
+            for (int i = 0; i < wysokosc; ++i)
+            {
+                for (int j = 0; j < szerokosc; ++j)
+                    Console.Write(plansza[i, j]);
+                Console.WriteLine();
+            }
+
+            
         }
 
     }
