@@ -110,10 +110,10 @@ namespace kolko_krzyzyk
                         return true;
                 }
 
-                for (int i = 0; i < szerokosc; ++i)
+                for (int j = 0; j < szerokosc; ++j)
                 {
                     int sumaKolumny = 0;
-                    for (int j = 0; j < wysokosc; ++j)
+                    for (int i = 0; i < wysokosc; ++i)
                     {
                         if (plansza[i, j] == Znak)
                             ++sumaKolumny;
